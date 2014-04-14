@@ -1,0 +1,30 @@
+*, body {
+	background: $background;
+}
+
+hr {
+	margin: 0;
+}
+
+:focus {
+	background:white;
+}
+
+.vcard {
+	border:none;
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+
+.hidden {
+	display: none !important;
+}
+
+#index-sticker {
+	max-width: 13.75rem;
+}
+
+#article-sticker {
+	max-width: 19.25rem;
+}

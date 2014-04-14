@@ -1,0 +1,32 @@
+.article-post-random {
+	@extend .issue-post-related;
+	opacity:1;
+	padding-left: 0;
+	border-left:none;
+	border-top: 1px solid #999;
+	article {
+		height:auto;
+	}
+}
+
+.articles {
+	margin-top: 0rem;
+	&-article {
+		height: 22.5rem;
+	}
+	&-article-title {
+		margin-bottom: 0rem;
+	}
+	&-article-meta {
+		margin-bottom: 0.5rem;
+		a {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.article-single {
+	
+}
+
