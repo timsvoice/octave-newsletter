@@ -1,15 +1,93 @@
+//style from octavejournal
+
+.alpha {
+    padding-left: 0px !important;
+}
+
+.beta {
+  padding-right: 0px !important;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.underline {
+  border-bottom: $underline;
+}
+
+.bold {
+  font-weight: $heavy-text;
+}
+
+.navigation-title-area-title {
+  display: inline-block;
+    margin-top: 0.25rem;
+}
+
+
+.issue {
+    &-title {
+    font-size: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    font-family: $body-font;
+    font-weight: $heavy-text;
+    a, a:hover {
+      color: $black;
+    }
+  }
+  &-date {
+    font-size: 1.5rem;
+    font-weight: $light-text;
+    line-height: 2rem;
+    text-align: center;
+    color: $dark-gray;
+  }
+  &-contents-meta {
+    color: $dark-gray;
+    a {
+      color: $light-gray;
+      font-family: $body-font;
+    }
+  }
+}
+
+.articles {
+  &-article-teaser {
+    font-family: $text-font;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+  &-article-title {
+  a {
+      font-family: $body-font;
+      color: $black;
+    }
+}
+}
+
+
 //styles for ink framework
 
 .mail {
   
   &-navigation {
-    @extend .navigation;
     border: none;
     margin-bottom: 2rem;
     margin-top: 0.75rem;
     
+    ul {
+      padding-left: 0;
+    }
+
     &-menu {
       li {
+        padding-right: 0.5rem;
         list-style: none;
         display: inline-block;
         width: auto;
@@ -19,10 +97,17 @@
         }
       }      
     }
+
+    &-branding {
+      float: left;
+    }
     
     &-title-area-image {
-      max-width: 3rem;
-      max-height: 3rem;
+      max-width: 2.75rem;
+      max-height: 2.75rem;
+      float: left;
+      padding-left: 0;
+      padding-right: 0.5rem;
     }
 
     &-title-area-title {
@@ -35,7 +120,6 @@
     }
 
     &-login {
-      float: right;
       vertical-align: middle;
       padding-top: 0.75rem;
       font-weight: $light-text;
@@ -47,6 +131,7 @@
   &-issue-title {
     @extend .issue-title;
     font-size: 2rem;
+    text-align: center;
   }
   &-issue-date {
     @extend .issue-date;
@@ -58,35 +143,39 @@
     &-article {
       @extend .articles-article-teaser;
       font-size: 1.1rem;
+      line-height: 1.5rem;
     }
     &-meta {
-      @extend .article-single-contents-meta;
-      margin-bottom: 0;
+      @extend .issue-contents-meta;
+      margin-bottom: 0.5rem;
+      margin-top: 0.5rem;
     }
     &-title {
       @extend .articles-article-title;
       font-size: 1.75rem;
-      margin-top: 0;
-      margin-bottom: 0;
+      margin-bottom: 0.5rem;
     }
   }
 
   &-login {
-      margin-left: auto;
-      margin-right: auto;
+      margin-top: 0rem;
+      margin-bottom: 3rem;
+      text-align: center;
       &-text {
+        display: inline-block;
         text-align: center;
         font-weight: $light-text;
         font-size: 2rem;
+        line-height: 3rem;
         font-style: italic;
         margin: 0;
         padding: 0;
+        vertical-align: middle;
       }
   }
 
   &-hero {
     display: inline-block;
-    padding-top: 2rem;
     td {
       padding-bottom: 0 !important;
     }
